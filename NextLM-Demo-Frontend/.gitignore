@@ -1,0 +1,29 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.env
+
+VITE_HUBSPOT_CLIENT_ID=8ea0ce7a-6fc8-48e2-b480-b830abb2d72d
+REACT_APP_HUBSPOT_CLIENT_ID=8ea0ce7a-6fc8-48e2-b480-b830abb2d72d
+REACT_APP_HUBSPOT_CLIENT_SECRET=your_client_secret_here99fc96f2-d4aa-4f67-a554-a843240b0e1d
