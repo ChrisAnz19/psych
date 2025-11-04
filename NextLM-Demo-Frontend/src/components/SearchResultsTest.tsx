@@ -5,83 +5,85 @@ const SearchResultsTest: React.FC = () => {
   const mockSearchResults = {
     request_id: 'test-search-123',
     requestId: 'test-search-123',
-    prompt: 'Find me corporate real estate decision-makers showing intent to purchase industrial facilities in the Southeast',
+    prompt: 'Find me ultra-high-net-worth individuals relocating from New York to Palm Beach Island with intent to purchase oceanfront estates in the $25M-$35M range',
     status: 'completed' as const,
     created_at: new Date().toISOString(),
     candidates: [
       {
-        name: "Danielle Brooks",
-        title: "Senior Director, Real Estate & Facilities",
-        company: "UPS (United Parcel Service, Inc.)",
-        email: "d.brooks@ups.com",
-        accuracy: 88,
+        name: "Richard Hamilton Ashworth III",
+        title: "Chief Executive Officer",
+        company: "Ashworth Capital Management (Private Wealth & Strategic Investments Group)",
+        email: "r.ashworth@ashworthcapital.com",
+        accuracy: 96,
         reasons: [
-          "Viewing Class A industrial properties in Georgia, Tennessee, and Texas between 100K–300K sq. ft.",
-          "Comparing purchase vs. leaseback structures and long-term operating cost models",
-          "Downloading developer marketing packets and environmental impact summaries",
-          "Researching municipal incentives for logistics development and tax abatements",
-          "Reviewing case studies on automation readiness and high-bay retrofitting for robotics integration"
+          "Viewing off-market Palm Beach Island listings priced between $28M–$32M with privacy and waterfront amenities",
+          "Comparing Florida tax residency frameworks and homestead protections for high-net-worth individuals",
+          "Downloading content from private law firms specializing in wealth transfer and large-asset closing coordination",
+          "Researching private aviation access, marina proximity, and yacht slip availability tied to luxury estates",
+          "Reading about escrow verification, property title transfer, and cash acquisition compliance procedures"
         ],
-        linkedin_url: "https://linkedin.com/in/daniellebrooks",
+        linkedin_url: "https://linkedin.com/in/richardashworth",
         profile_photo_url: undefined,
-        location: "Atlanta, Georgia, United States",
+        location: "New York, New York, United States",
         linkedin_profile: {
-          summary: "Our B2B intent model identified Danielle Brooks, Senior Director of Real Estate & Facilities at UPS, as exhibiting elevated purchase intent around industrial property acquisition and expansion. Over the past six weeks, her tracked corporate IP activity includes 33 signals tied to commercial brokerage listings, warehouse capacity calculators, and developer RFP portals focused on Southeastern U.S. logistics corridors.\n\nRecent session clusters show repeat visits to CBRE Industrial, JLL Commercial, and LoopNet Pro listings in the 100K–300K sq. ft. range near Savannah, Memphis, and Dallas–Fort Worth — with filters consistently set for 'owned facility,' 'temperature controlled,' and 'logistics adjacency.'\n\nCross-domain analysis also surfaced research behavior on zoning compliance, build-to-suit leaseback financing, and logistics park proximity modeling, suggesting UPS is preparing for direct purchase rather than short-term leasing.",
+          summary: "Our intelligence engine identified Richard Hamilton Ashworth III, Chief Executive Officer of Ashworth Capital Management, as an exceptionally high-confidence luxury buyer currently planning relocation from New York to Palm Beach Island. Over the past 21 days, his digital behavior shows sustained engagement with gated property networks and off-market estate listings between $28M and $32M. His browsing history includes interactions with pages on Palm Beach architectural firms, wealth advisory services for relocation, and multiple private-aviation and marina-access property filters.\n\nBehavioral clustering reveals activity engaging with content focused on Florida tax residency establishment, high-value insurance underwriting portals, and wire verification policy documentation—signaling preparation for a large cash acquisition rather than exploratory browsing. He also accessed resources outlining Florida homestead exemptions, escrow security best practices, and logistical services for multi-asset relocation from New York, all within a compressed two-week period.\n\nTogether, these behavioral patterns indicate a motivated, liquid buyer targeting an ultra-luxury oceanfront estate purchase on Palm Beach Island within the next 60 days as part of a permanent relocation from New York.",
           experience: [],
           education: []
         },
         behavioral_data: {
-          behavioral_insight: "Danielle exhibits strong B2B purchase intent with concentrated research activity across industrial property acquisition and logistics infrastructure.",
+          behavioral_insight: "Richard exhibits exceptional decision-making authority and financial capacity. His profile indicates readiness for significant luxury purchases aligned with lifestyle and status.",
           scores: {
             cmi: {
               score: 89,
-              explanation: "Actively comparing industrial properties and developer proposals"
+              explanation: "Actively viewing Palm Beach Island oceanfront estates and comparing private marina access"
             },
             rbfs: {
-              score: 68,
-              explanation: "Open to both purchase and build-to-suit leaseback structures"
+              score: 38,
+              explanation: "Open to Mediterranean estate renovations if the property offers prime waterfront positioning"
             },
             ias: {
-              score: 92,
-              explanation: "Extensively researching zoning, incentives, and automation readiness"
+              score: 91,
+              explanation: "Extensively researching Palm Beach Island market trends and off-market estate valuations"
             }
           }
         },
         personality_types: {
-          myers_briggs: "ESTJ",
-          riasec: ["Enterprising", "Conventional", "Realistic"],
+          myers_briggs: "ENTJ",
+          riasec: ["Enterprising", "Conventional", "Investigative"],
           ocean: {
-            openness: 68,
-            conscientiousness: 89,
-            extraversion: 72,
-            agreeableness: 65,
-            neuroticism: 31
+            openness: 78,
+            conscientiousness: 92,
+            extraversion: 85,
+            agreeableness: 68,
+            neuroticism: 22
           },
           big_four: "Average (Resilient)"
         },
         buyer_alignment: [
-          "Senior Director role at UPS indicates direct decision-making authority on facilities acquisition in $50M-$100M+ range",
-          "Six-week sustained research across multiple markets suggests board-approved capital allocation and active RFP phase",
-          "Focus on owned facility filters rather than leasing indicates strategic long-term asset investment approach",
-          "Automation readiness and robotics integration research signals future-proofed facility planning with multi-decade horizon",
-          "Municipal incentive research demonstrates sophisticated TCO analysis and expectation of favorable deal structuring",
-          "ESTJ personality and high Conscientiousness (89%) predict methodical due diligence and reliable execution on complex transactions"
+          "Net worth of $239M and demonstrated cash transfer protocol research indicate capacity for all-cash $28M-$32M acquisition without financing contingencies",
+          "21-day sustained engagement with off-market Palm Beach Island listings shows serious, focused intent beyond casual browsing",
+          "Engagement with content on wire verification and cash acquisition protocols signals advanced transaction planning stage",
+          "Research into Florida homestead exemptions and tax residency frameworks indicates committed long-term relocation strategy from New York, not speculative purchase",
+          "Coordination of yacht slip availability and private aviation access demonstrates comprehensive lifestyle integration—reducing deal fall-through risk",
+          "ENTJ decisiveness combined with private aviation ownership enables rapid site visits and accelerated closing timelines without logistical friction"
         ],
         financial_profile: {
-          net_worth: "N/A (Corporate buyer)",
-          liquid_assets: "N/A (Corporate buyer)",
-          real_estate_portfolio: "Corporate decision-maker",
-          investment_portfolio: "N/A (Corporate buyer)",
-          luxury_assets: "N/A",
-          philanthropic_giving: "N/A"
+          net_worth: "$239M",
+          liquid_assets: "$12M+",
+          real_estate_portfolio: "6 properties across 4 states",
+          investment_portfolio: "$18M diversified",
+          luxury_assets: "Gulfstream G650, 85ft Azimut yacht",
+          philanthropic_giving: "$500K+ annually"
         },
         interests: [
-          "Industrial logistics & supply chain optimization",
-          "Sustainable warehouse design",
-          "Commercial real estate development",
-          "Automation & robotics integration",
-          "Public-private infrastructure partnerships",
-          "Women in commercial real estate leadership"
+          "Ocean yachting & Palm Beach regatta",
+          "Golf (Everglades Club & Mar-a-Lago)",
+          "Contemporary art collection (Damien Hirst, Jeff Koons)",
+          "Classic car collecting & Cavallino Classic",
+          "Fine wine & private cellar curation",
+          "Educational philanthropy",
+          "Michelin-starred dining (Café Boulud, Buccan)",
+          "Patek Philippe & Richard Mille collections"
         ]
       },
       {
@@ -206,7 +208,7 @@ const SearchResultsTest: React.FC = () => {
     <SearchResults
       isVisible={true}
       onClose={() => console.log('Close clicked')}
-      searchQuery="Find me corporate real estate decision-makers showing intent to purchase industrial facilities in the Southeast"
+      searchQuery="Find me ultra-high-net-worth individuals relocating from New York to Palm Beach Island with intent to purchase oceanfront estates in the $25M-$35M range"
       searchResults={mockSearchResults}
       apiError={null}
     />

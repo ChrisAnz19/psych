@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Hamilton Ashworth III - Search Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #FFFFFF;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            color: #C0C0D0;
+        }
+        
+        .search-query {
+            background: rgba(68, 42, 71, 0.4);
+            border: 1px solid #5a3a5f;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            color: #E0E0E0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .candidate-card {
+            background: rgba(42, 35, 60, 0.6);
+            border: 1px solid #4a3f5f;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .candidate-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #3a3350;
+        }
+        
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #FFFFFF;
+            flex-shrink: 0;
+        }
+        
+        .candidate-info {
+            flex: 1;
+        }
+        
+        .candidate-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        
+        .candidate-title {
+            color: #9FA0B5;
+            font-weight: 400;
+        }
+        
+        .candidate-company {
+            font-size: 13px;
+            color: #C0C0D0;
+            margin-bottom: 3px;
+        }
+        
+        .candidate-location {
+            font-size: 12px;
+            color: #8A8A9F;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .accuracy-badge {
+            background-color: #442a47;
+            color: #f472b6;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 18px;
+            border: 1px solid #f472b6;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section {
+            margin-top: 24px;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #f472b6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        
+        .summary-text {
+            color: #D0D0E0;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .reasons-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .reasons-list li {
+            color: #D0D0E0;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .reasons-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f472b6;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .contact-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        
+        .chip {
+            background: rgba(68, 42, 71, 0.4);
+            border: 1px solid #6a4a6f;
+            border-radius: 20px;
+            padding: 8px 16px;
+            color: #E0E0E0;
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .chip:hover {
+            background: rgba(244, 114, 182, 0.1);
+            border-color: #f472b6;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #4a3f5f, transparent);
+            margin: 24px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ultra-High-Net-Worth Palm Beach Relocation Search</h1>
+            <p>Found 1 result • Generated on November 4, 2025</p>
+        </div>
+        
+        <div class="search-query">
+            <strong>Search Query:</strong> Find me ultra-high-net-worth individuals relocating from New York to Palm Beach Island with intent to purchase oceanfront estates in the $25M-$35M range
+        </div>
+        
+        <div class="candidate-card">
+            <div class="candidate-header">
+                <div class="avatar">RA</div>
+                <div class="candidate-info">
+                    <h3 class="candidate-name">
+                        Richard Hamilton Ashworth III <span class="candidate-title">— Chief Executive Officer</span>
+                    </h3>
+                    <p class="candidate-company">Ashworth Capital Management (Private Wealth & Strategic Investments Group)</p>
+                    <p class="candidate-location">📍 New York, New York, United States</p>
+                </div>
+                <div class="accuracy-badge">
+                    🎯 96%
+                </div>
+            </div>
+            
+            <div class="contact-chips">
+                <a href="https://linkedin.com/in/richardashworth" class="chip">🔗 LinkedIn</a>
+                <span class="chip">✉️ r.ashworth@ashworthcapital.com</span>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="section">
+                <h4 class="section-title">Why This Match</h4>
+                <p class="summary-text">
+                    Our intelligence engine identified Richard Hamilton Ashworth III, Chief Executive Officer of Ashworth Capital Management, as an exceptionally high-confidence luxury buyer currently planning relocation from New York to Palm Beach Island. Over the past 21 days, his digital behavior shows sustained engagement with gated property networks and off-market estate listings between $28M and $32M. His browsing history includes interactions with pages on Palm Beach architectural firms, wealth advisory services for relocation, and multiple private-aviation and marina-access property filters.
+                </p>
+                <p class="summary-text">
+                    Behavioral clustering reveals activity engaging with content focused on Florida tax residency establishment, high-value insurance underwriting portals, and wire verification policy documentation—signaling preparation for a large cash acquisition rather than exploratory browsing. He also accessed resources outlining Florida homestead exemptions, escrow security best practices, and logistical services for multi-asset relocation from New York, all within a compressed two-week period.
+                </p>
+                <p class="summary-text">
+                    Together, these behavioral patterns indicate a motivated, liquid buyer targeting an ultra-luxury oceanfront estate purchase on Palm Beach Island within the next 60 days as part of a permanent relocation from New York.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h4 class="section-title">Buying Intent Detected</h4>
+                <ul class="reasons-list">
+                    <li>Viewing off-market Palm Beach Island listings priced between $28M–$32M with privacy and waterfront amenities</li>
+                    <li>Comparing Florida tax residency frameworks and homestead protections for high-net-worth individuals</li>
+                    <li>Downloading content from private law firms specializing in wealth transfer and large-asset closing coordination</li>
+                    <li>Researching private aviation access, marina proximity, and yacht slip availability tied to luxury estates</li>
+                    <li>Reading about escrow verification, property title transfer, and cash acquisition compliance procedures</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

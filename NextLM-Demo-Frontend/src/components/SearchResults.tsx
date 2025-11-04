@@ -322,7 +322,7 @@ const SearchResults: React.FC<SearchResultsProps> = ({
                       color: '#FFFFFF',
                       flexShrink: 0
                     }}>
-                      {candidate.name === 'Danielle Brooks' ? 'DB' : candidate.name?.split(' ').map(n => n[0]).join('').substring(0, 2) || 'MC'}
+                      {candidate.name === 'Richard Hamilton Ashworth III' ? 'RA' : candidate.name === 'Danielle Brooks' ? 'DB' : candidate.name?.split(' ').map(n => n[0]).join('').substring(0, 2) || 'MC'}
                     </div>
 
                     {/* Info */}

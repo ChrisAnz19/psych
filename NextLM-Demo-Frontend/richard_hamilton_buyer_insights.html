@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Hamilton Ashworth III - Buyer Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(42, 35, 60, 0.8);
+            border-radius: 24px;
+            padding: 48px;
+            border: 1px solid #4a3f5f;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 2px solid #3a3350;
+        }
+        
+        .avatar-large {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #FFFFFF;
+            flex-shrink: 0;
+        }
+        
+        .header-info h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+        }
+        
+        .header-info p {
+            font-size: 16px;
+            color: #C0C0D0;
+            margin-bottom: 4px;
+        }
+        
+        .header-info .location {
+            font-size: 14px;
+            color: #8A8A9F;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        
+        .card {
+            background: rgba(30, 25, 40, 0.6);
+            border: 1px solid #3a3350;
+            border-radius: 16px;
+            padding: 28px;
+        }
+        
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #f472b6;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .profile-item {
+            margin-bottom: 16px;
+        }
+        
+        .profile-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #9FA0B5;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+        .profile-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+        
+        .personality-badge {
+            background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        
+        .ocean-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 24px;
+        }
+        
+        .ocean-scores {
+            flex: 1;
+        }
+        
+        .ocean-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            padding: 8px 0;
+        }
+        
+        .ocean-label {
+            font-size: 14px;
+            color: #C0C0D0;
+            font-weight: 500;
+        }
+        
+        .ocean-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: #f472b6;
+        }
+        
+        .ocean-visual {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        .ocean-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(
+                from 0deg,
+                #f472b6 0deg 140deg,
+                #ec4899 140deg 280deg,
+                #d946ef 280deg 360deg
+            );
+            opacity: 0.3;
+            position: absolute;
+        }
+        
+        .ocean-inner {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: rgba(30, 25, 40, 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .ocean-score-main {
+            font-size: 32px;
+            font-weight: 700;
+            color: #f472b6;
+        }
+        
+        .ocean-label-center {
+            font-size: 12px;
+            color: #9FA0B5;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .interests-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .interest-item {
+            color: #D0D0E0;
+            font-size: 14px;
+            padding: 10px 16px;
+            background: rgba(244, 114, 182, 0.08);
+            border: 1px solid rgba(244, 114, 182, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .interest-item:before {
+            content: "•";
+            color: #f472b6;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .alignment-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .alignment-item {
+            color: #D0D0E0;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            padding-left: 28px;
+            position: relative;
+        }
+        
+        .alignment-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f472b6;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .behavioral-scores {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .score-card {
+            background: rgba(244, 114, 182, 0.08);
+            border: 1px solid rgba(244, 114, 182, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .score-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #9FA0B5;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .score-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #f472b6;
+            margin-bottom: 8px;
+        }
+        
+        .score-explanation {
+            font-size: 13px;
+            color: #C0C0D0;
+            line-height: 1.5;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .riasec-badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+        
+        .riasec-badge {
+            background: rgba(244, 114, 182, 0.15);
+            border: 1px solid rgba(244, 114, 182, 0.3);
+            color: #f472b6;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="avatar-large">RA</div>
+            <div class="header-info">
+                <h1>Richard Hamilton Ashworth III</h1>
+                <p>Chief Executive Officer</p>
+                <p>Ashworth Capital Management</p>
+                <p class="location">📍 New York, New York → Palm Beach Island, Florida</p>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <!-- Financial Profile -->
+            <div class="card">
+                <h3 class="card-title">💰 Financial Profile</h3>
+                <div class="profile-item">
+                    <div class="profile-label">Net Worth</div>
+                    <div class="profile-value">$239M</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-label">Liquid Assets</div>
+                    <div class="profile-value">$12M+</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-label">Real Estate Portfolio</div>
+                    <div class="profile-value">6 properties across 4 states</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-label">Investment Portfolio</div>
+                    <div class="profile-value">$18M diversified</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-label">Luxury Assets</div>
+                    <div class="profile-value">Gulfstream G650, 85ft Azimut yacht</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-label">Philanthropic Giving</div>
+                    <div class="profile-value">$500K+ annually</div>
+                </div>
+            </div>
+            
+            <!-- Personality Types -->
+            <div class="card">
+                <h3 class="card-title">🧠 Personality Types</h3>
+                <div class="profile-item">
+                    <div class="profile-label">Myers-Briggs</div>
+                    <div class="personality-badge">ENTJ</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-label">Big Four Temperament</div>
+                    <div class="personality-badge" style="font-size: 16px;">AVERAGE (RESILIENT)</div>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-label">RIASEC</div>
+                    <div class="riasec-badges">
+                        <span class="riasec-badge">Enterprising</span>
+                        <span class="riasec-badge">Conventional</span>
+                        <span class="riasec-badge">Investigative</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Behavioral Scores -->
+        <div class="card full-width">
+            <h3 class="card-title">📊 Behavioral Scores</h3>
+            <div class="behavioral-scores">
+                <div class="score-card">
+                    <div class="score-label">CMI Score</div>
+                    <div class="score-value">89%</div>
+                    <div class="score-explanation">Actively viewing Palm Beach Island oceanfront estates and comparing private marina access</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-label">RBFS Score</div>
+                    <div class="score-value">38%</div>
+                    <div class="score-explanation">Open to Mediterranean estate renovations if the property offers prime waterfront positioning</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-label">IAS Score</div>
+                    <div class="score-value">91%</div>
+                    <div class="score-explanation">Extensively researching Palm Beach Island market trends and off-market estate valuations</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- OCEAN Personality -->
+        <div class="card full-width">
+            <h3 class="card-title">🌊 OCEAN Personality Dimensions</h3>
+            <div class="ocean-container">
+                <div class="ocean-scores">
+                    <div class="ocean-item">
+                        <span class="ocean-label">Openness:</span>
+                        <span class="ocean-value">78%</span>
+                    </div>
+                    <div class="ocean-item">
+                        <span class="ocean-label">Conscientiousness:</span>
+                        <span class="ocean-value">92%</span>
+                    </div>
+                    <div class="ocean-item">
+                        <span class="ocean-label">Extraversion:</span>
+                        <span class="ocean-value">85%</span>
+                    </div>
+                    <div class="ocean-item">
+                        <span class="ocean-label">Agreeableness:</span>
+                        <span class="ocean-value">68%</span>
+                    </div>
+                    <div class="ocean-item">
+                        <span class="ocean-label">Neuroticism:</span>
+                        <span class="ocean-value">22%</span>
+                    </div>
+                </div>
+                <div class="ocean-visual">
+                    <div class="ocean-circle"></div>
+                    <div class="ocean-inner">
+                        <div class="ocean-score-main">82</div>
+                        <div class="ocean-label-center">AVG SCORE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Interests & Lifestyle -->
+        <div class="card full-width">
+            <h3 class="card-title">⭐ Interests & Lifestyle</h3>
+            <div class="interests-grid">
+                <div class="interest-item">Ocean yachting & Palm Beach regatta</div>
+                <div class="interest-item">Golf (Everglades Club & Mar-a-Lago)</div>
+                <div class="interest-item">Contemporary art collection (Damien Hirst, Jeff Koons)</div>
+                <div class="interest-item">Classic car collecting & Cavallino Classic</div>
+                <div class="interest-item">Fine wine & private cellar curation</div>
+                <div class="interest-item">Educational philanthropy</div>
+                <div class="interest-item">Michelin-starred dining (Café Boulud, Buccan)</div>
+                <div class="interest-item">Patek Philippe & Richard Mille collections</div>
+            </div>
+        </div>
+        
+        <!-- Buyer Alignment -->
+        <div class="card full-width">
+            <h3 class="card-title">🎯 Buyer Alignment Analysis</h3>
+            <ul class="alignment-list">
+                <li class="alignment-item">Net worth of $239M and demonstrated cash transfer protocol research indicate capacity for all-cash $28M-$32M acquisition without financing contingencies</li>
+                <li class="alignment-item">21-day sustained engagement with off-market Palm Beach Island listings shows serious, focused intent beyond casual browsing</li>
+                <li class="alignment-item">Engagement with content on wire verification and cash acquisition protocols signals advanced transaction planning stage</li>
+                <li class="alignment-item">Research into Florida homestead exemptions and tax residency frameworks indicates committed long-term relocation strategy from New York, not speculative purchase</li>
+                <li class="alignment-item">Coordination of yacht slip availability and private aviation access demonstrates comprehensive lifestyle integration—reducing deal fall-through risk</li>
+                <li class="alignment-item">ENTJ decisiveness combined with private aviation ownership enables rapid site visits and accelerated closing timelines without logistical friction</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
